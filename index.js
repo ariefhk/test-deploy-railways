@@ -16,10 +16,6 @@ app.get("/cars", (req, res) => {
   res.sendFile(path.join(staticFilePath, "cari_mobil.html"));
 });
 
-// app.get("*", function (req, res) {
-//   res.send("Halaman Tidak ditemukan!", 404);
-// });
-
 app.listen(process.env.PORT || 3000, () => {
   console.log(
     "Server Listen on port http://localhost:",
