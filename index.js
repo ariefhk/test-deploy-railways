@@ -12,9 +12,9 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(staticFilePath, "index.html"));
 });
 
-// app.get("/cars", (req, res) => {
-//   res.sendFile(path.join(staticFilePath, "cari_mobil.html"));
-// });
+app.get("/cars", (req, res) => {
+  res.sendFile(path.join(staticFilePath, "cari_mobil.html"));
+});
 
 // app.get("*", function (req, res) {
 //   res.send("Halaman Tidak ditemukan!", 404);
