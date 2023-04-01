@@ -19,6 +19,9 @@ app.get("*", function (req, res) {
   res.send("Halaman Tidak ditemukan!", 404);
 });
 
-app.listen(3000, () => {
-  console.log("Server Listen on port http://localhost:%d", 3000);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(
+    "Server Listen on port http://localhost:",
+    process.env.PORT || 3000
+  );
 });

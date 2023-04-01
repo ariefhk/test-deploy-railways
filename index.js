@@ -1,15 +1,28 @@
+const { log } = require("console");
 const express = require("express");
 const path = require("path");
 const dir = path.resolve();
-const staticFile = path.join(dir, "public");
+const staticFilePath = path.join(dir, "publics");
 
 const app = express();
-app.use(express.static(staticFile));
+console.log(staticFilePath);
+app.use(express.static(staticFilePath));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(staticFile, "index.html"));
+  res.sendFile(path.join(staticFilePath, "index.html"));
 });
 
+// app.get("/cars", (req, res) => {
+//   res.sendFile(path.join(staticFilePath, "cari_mobil.html"));
+// });
+
+// app.get("*", function (req, res) {
+//   res.send("Halaman Tidak ditemukan!", 404);
+// });
+
 app.listen(process.env.PORT || 3000, () => {
-  console.log(`This app run at http://localhost:${process.env.PORT || 3000}`);
+  console.log(
+    "Server Listen on port http://localhost:",
+    process.env.PORT || 3000
+  );
 });
