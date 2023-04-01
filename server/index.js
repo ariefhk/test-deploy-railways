@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const dir = path.resolve();
-const staticFilePath = path.join(dir, "publics");
+const staticFilePath = path.join(dir, "public");
 
 const app = express();
 console.log(staticFilePath);
